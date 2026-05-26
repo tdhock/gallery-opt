@@ -1,0 +1,3 @@
+This repository is the source code for a [[https://tdhock.github.io/gallery-opt/][gallery]] of data visualizations about optimization algorithms, created using [[https://github.com/animint/animint2][animint2]].
+
+[[https://animint-manual-en.netlify.app/ch05/#the-animint2-github-deployment-steps][Contribution instructions]].
