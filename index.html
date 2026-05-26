@@ -1,0 +1,283 @@
+<!DOCTYPE html>
+
+<html>
+
+<head>
+
+<meta charset="utf-8" />
+<meta name="generator" content="pandoc" />
+<meta http-equiv="X-UA-Compatible" content="IE=EDGE" />
+
+
+
+
+<title>animint2 optimization gallery</title>
+
+<script src="index_files/header-attrs-2.31/header-attrs.js"></script>
+<script src="index_files/jquery-3.6.0/jquery-3.6.0.min.js"></script>
+<meta name="viewport" content="width=device-width, initial-scale=1" />
+<link href="index_files/bootstrap-3.3.5/css/bootstrap.min.css" rel="stylesheet" />
+<script src="index_files/bootstrap-3.3.5/js/bootstrap.min.js"></script>
+<script src="index_files/bootstrap-3.3.5/shim/html5shiv.min.js"></script>
+<script src="index_files/bootstrap-3.3.5/shim/respond.min.js"></script>
+<style>h1 {font-size: 34px;}
+       h1.title {font-size: 38px;}
+       h2 {font-size: 30px;}
+       h3 {font-size: 24px;}
+       h4 {font-size: 18px;}
+       h5 {font-size: 16px;}
+       h6 {font-size: 12px;}
+       code {color: inherit; background-color: rgba(0, 0, 0, 0.04);}
+       pre:not([class]) { background-color: white }</style>
+<script src="index_files/navigation-1.1/tabsets.js"></script>
+<link href="index_files/highlightjs-9.12.0/default.css" rel="stylesheet" />
+<script src="index_files/highlightjs-9.12.0/highlight.js"></script>
+
+<style type="text/css">
+  code{white-space: pre-wrap;}
+  span.smallcaps{font-variant: small-caps;}
+  span.underline{text-decoration: underline;}
+  div.column{display: inline-block; vertical-align: top; width: 50%;}
+  div.hanging-indent{margin-left: 1.5em; text-indent: -1.5em;}
+  ul.task-list{list-style: none;}
+    </style>
+
+<style type="text/css">code{white-space: pre;}</style>
+<script type="text/javascript">
+if (window.hljs) {
+  hljs.configure({languages: []});
+  hljs.initHighlightingOnLoad();
+  if (document.readyState && document.readyState === "complete") {
+    window.setTimeout(function() { hljs.initHighlighting(); }, 0);
+  }
+}
+</script>
+
+
+
+
+
+
+
+
+
+<style type = "text/css">
+.main-container {
+  max-width: 940px;
+  margin-left: auto;
+  margin-right: auto;
+}
+img {
+  max-width:100%;
+}
+.tabbed-pane {
+  padding-top: 12px;
+}
+.html-widget {
+  margin-bottom: 20px;
+}
+button.code-folding-btn:focus {
+  outline: none;
+}
+summary {
+  display: list-item;
+}
+details > summary > p:only-child {
+  display: inline;
+}
+pre code {
+  padding: 0;
+}
+</style>
+
+
+
+<!-- tabsets -->
+
+<style type="text/css">
+.tabset-dropdown > .nav-tabs {
+  display: inline-table;
+  max-height: 500px;
+  min-height: 44px;
+  overflow-y: auto;
+  border: 1px solid #ddd;
+  border-radius: 4px;
+}
+
+.tabset-dropdown > .nav-tabs > li.active:before, .tabset-dropdown > .nav-tabs.nav-tabs-open:before {
+  content: "\e259";
+  font-family: 'Glyphicons Halflings';
+  display: inline-block;
+  padding: 10px;
+  border-right: 1px solid #ddd;
+}
+
+.tabset-dropdown > .nav-tabs.nav-tabs-open > li.active:before {
+  content: "\e258";
+  font-family: 'Glyphicons Halflings';
+  border: none;
+}
+
+.tabset-dropdown > .nav-tabs > li.active {
+  display: block;
+}
+
+.tabset-dropdown > .nav-tabs > li > a,
+.tabset-dropdown > .nav-tabs > li > a:focus,
+.tabset-dropdown > .nav-tabs > li > a:hover {
+  border: none;
+  display: inline-block;
+  border-radius: 4px;
+  background-color: transparent;
+}
+
+.tabset-dropdown > .nav-tabs.nav-tabs-open > li {
+  display: block;
+  float: none;
+}
+
+.tabset-dropdown > .nav-tabs > li {
+  display: none;
+}
+</style>
+
+<!-- code folding -->
+
+
+
+
+</head>
+
+<body>
+
+
+<div class="container-fluid main-container">
+
+
+
+
+<div id="header">
+
+
+
+<h1 class="title toc-ignore">animint2 optimization gallery</h1>
+
+</div>
+
+
+<p>This is a gallery of 4 data visualizations related to optimization,
+which have been created using the R package <a
+href="https://github.com/animint/animint2">animint2</a>.</p>
+<table>
+<colgroup>
+<col width="43%" />
+<col width="14%" />
+<col width="42%" />
+</colgroup>
+<thead>
+<tr class="header">
+<th align="left">viz.link</th>
+<th align="left">title</th>
+<th align="left">links</th>
+</tr>
+</thead>
+<tbody>
+<tr class="odd">
+<td
+align="left"><a href="https://tdhock.github.io/2026-05-25-Newton-stationary-point/"><img src="repos/tdhock/2026-05-25-Newton-stationary-point.png" alt="tdhock/2026-05-25-Newton-stationary-point" /></a></td>
+<td align="left">Newton’s method for stationary point finding</td>
+<td
+align="left"><a href="https://github.com/tdhock/2026-05-25-Newton-stationary-point/tree/gh-pages">repo</a>
+<a href="https://github.com/tdhock/2026-05-nlopt/blob/main/figure-newton.R">source</a>
+NA</td>
+</tr>
+<tr class="even">
+<td
+align="left"><a href="https://tdhock.github.io/2019-02-14-L2-regularization/"><img src="repos/tdhock/2019-02-14-L2-regularization.png" alt="tdhock/2019-02-14-L2-regularization" /></a></td>
+<td align="left">L2-regularized (Ridge) least squares linear
+regression</td>
+<td
+align="left"><a href="https://github.com/tdhock/2019-02-14-L2-regularization/tree/gh-pages">repo</a>
+<a href="https://github.com/tdhock/cs499-spring2019/blob/master/2019-02-14-L2-regularization/viz.R">source</a>
+NA</td>
+</tr>
+<tr class="odd">
+<td
+align="left"><a href="https://tdhock.github.io/2019-02-05-linear-regression-1d-grad-desc-ozone-steps/"><img src="repos/tdhock/2019-02-05-linear-regression-1d-grad-desc-ozone-steps.png" alt="tdhock/2019-02-05-linear-regression-1d-grad-desc-ozone-steps" /></a></td>
+<td align="left">Gradient descent with several step sizes for 1d linear
+regression in ozone data</td>
+<td
+align="left"><a href="https://github.com/tdhock/2019-02-05-linear-regression-1d-grad-desc-ozone-steps/tree/gh-pages">repo</a>
+<a href="https://github.com/tdhock/cs499-spring2019/blob/master/2019-02-05-linear-regression/viz.step.size.R">source</a>
+NA</td>
+</tr>
+<tr class="even">
+<td
+align="left"><a href="https://tdhock.github.io/2019-02-05-linear-regression-1d-grad-desc-ozone/"><img src="repos/tdhock/2019-02-05-linear-regression-1d-grad-desc-ozone.png" alt="tdhock/2019-02-05-linear-regression-1d-grad-desc-ozone" /></a></td>
+<td align="left">Gradient descent for 1d linear regression in ozone
+data</td>
+<td
+align="left"><a href="https://github.com/tdhock/2019-02-05-linear-regression-1d-grad-desc-ozone/tree/gh-pages">repo</a>
+<a href="https://github.com/tdhock/cs499-spring2019/blob/master/2019-02-05-linear-regression/viz.R">source</a>
+NA</td>
+</tr>
+</tbody>
+</table>
+<p><a href="meta.csv">Download this table: meta.csv</a></p>
+<div id="source-code" class="section level2">
+<h2>Source code</h2>
+<ul>
+<li><a href="https://github.com/tdhock/gallery-ml/tree/gh-pages">This
+gallery repository</a>,</li>
+<li><a
+href="https://github.com/animint/animint2/blob/master/R/z_pages.R"><code>animint2::update_gallery()</code></a>.</li>
+</ul>
+</div>
+
+
+
+
+</div>
+
+<script>
+
+// add bootstrap table styles to pandoc tables
+function bootstrapStylePandocTables() {
+  $('tr.odd').parent('tbody').parent('table').addClass('table table-condensed');
+}
+$(document).ready(function () {
+  bootstrapStylePandocTables();
+});
+
+
+</script>
+
+<!-- tabsets -->
+
+<script>
+$(document).ready(function () {
+  window.buildTabsets("TOC");
+});
+
+$(document).ready(function () {
+  $('.tabset-dropdown > .nav-tabs > li').click(function () {
+    $(this).parent().toggleClass('nav-tabs-open');
+  });
+});
+</script>
+
+<!-- code folding -->
+
+
+<!-- dynamically load mathjax for compatibility with self-contained -->
+<script>
+  (function () {
+    var script = document.createElement("script");
+    script.type = "text/javascript";
+    script.src  = "https://mathjax.rstudio.com/latest/MathJax.js?config=TeX-AMS-MML_HTMLorMML";
+    document.getElementsByTagName("head")[0].appendChild(script);
+  })();
+</script>
+
+</body>
+</html>
