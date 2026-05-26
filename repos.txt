@@ -1,0 +1,5 @@
+tdhock/2026-05-25-Newton-stationary-point
+tdhock/2019-02-14-L2-regularization
+tdhock/2019-02-05-linear-regression-1d-grad-desc-ozone-steps
+tdhock/2019-02-05-linear-regression-1d-grad-desc-ozone
+

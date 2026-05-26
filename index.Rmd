@@ -1,0 +1,80 @@
+---
+title: animint2 optimization gallery
+output:
+  html_document:
+    self_contained: false
+---
+
+```{r Ropts, echo=FALSE}
+options(width=200)
+knitr::opts_chunk$set(
+  echo=FALSE,
+  results="asis")
+ahref <- function(href, text){
+  sprintf('<a href="%s">%s</a>', href, text)
+}
+suppressPackageStartupMessages(library(data.table))
+```
+
+```{r}
+myread <- function(csv, repo.col){
+  if(!file.exists(csv))return(data.table())
+  nc::capture_first_df(
+    data.table::fread(csv),
+    viz_owner_repo=list(owner=".*?", "/", repo_only=".*")
+  )[
+  , img.png := sprintf("repos/%s.png", viz_owner_repo)
+  ][
+  , viz.link := ahref(
+      sprintf("https://%s.github.io/%s/", owner, repo_only),
+      ifelse(
+        file.exists(img.png),
+        sprintf('<img src="%s" alt="%s" />', img.png, viz_owner_repo),
+        viz_owner_repo))
+  ][
+  , repo.link := ahref(
+    sprintf("https://github.com/%s/tree/gh-pages", viz_owner_repo),
+    "repo")
+  ][]
+}
+repos_dt <- fread("repos.txt",col.names="viz_owner_repo",header=FALSE)
+meta.dt <- myread("meta.csv")[, let(
+  source.link = ahref(source, "source"),
+  video.link = ifelse(video=="", "", ahref(video,  "video"))
+)][
+, links := paste(repo.link, source.link, video.link)
+][
+  repos_dt, on="viz_owner_repo", nomatch=0L
+  ##order(-add.POSIXct)
+]
+error.dt <- myread("error.csv", "viz_owner_repo")
+```
+
+This is a gallery of `r nrow(meta.dt)` data visualizations related to optimization,
+which have been created using the R package
+[animint2](https://github.com/animint/animint2).
+
+```{r}
+knitr::kable(meta.dt[, .(
+  viz.link, title, links
+)])
+download <- function(csv){
+  cat(ahref(csv, paste("Download this table: ", csv)))
+}
+download("meta.csv")
+```
+
+```{r}
+if(nrow(error.dt)){
+  cat("## Visualizations with missing meta-data\n")
+  download("error.csv")
+  knitr::kable(error.dt[, .(
+    viz.link, repo.link, error
+  )])
+}
+```
+
+## Source code
+
+* [This gallery repository](https://github.com/tdhock/gallery-ml/tree/gh-pages),
+* [`animint2::update_gallery()`](https://github.com/animint/animint2/blob/master/R/z_pages.R).
