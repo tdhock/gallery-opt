@@ -1,4 +1,5 @@
 add.POSIXct,viz_owner_repo,video,source,title
+2026-06-19T16:01:04.077739Z,tdhock/2026-06-19-svm-grid,,https://github.com/tdhock/2026-05-nlopt/blob/main/figure-svm.R,Grid search for hard margin support vector machine
 2026-06-08T17:26:14.393362Z,tdhock/2026-06-08-armijo-2D,,https://github.com/tdhock/2026-05-nlopt/blob/main/figure-armijo-2D.R,2D gradient descent with Armijo line search
 2026-06-07T12:58:06.338780Z,tdhock/2026-06-05-trust-region-2D,,https://github.com/tdhock/2026-05-nlopt/blob/main/figure-trust-region-2D.R,2D Trust region and conjugate gradient
 2026-06-01T04:47:10.553882Z,tdhock/2026-06-01-trust-region-sin,,https://github.com/tdhock/2026-05-nlopt/blob/main/figure-trust-region.R,Trust region with Newton optimization algorithm in 1D
@@ -6,4 +7,4 @@ add.POSIXct,viz_owner_repo,video,source,title
 2026-05-26T14:52:45.416862Z,tdhock/2019-02-14-L2-regularization,,https://github.com/tdhock/cs499-spring2019/blob/master/2019-02-14-L2-regularization/viz.R,L2-regularized (Ridge) least squares linear regression
 2026-05-26T14:52:45.416862Z,tdhock/2019-02-05-linear-regression-1d-grad-desc-ozone-steps,,https://github.com/tdhock/cs499-spring2019/blob/master/2019-02-05-linear-regression/viz.step.size.R,Gradient descent with several step sizes for 1d linear regression in ozone data
 2026-05-26T14:52:45.416862Z,tdhock/2019-02-05-linear-regression-1d-grad-desc-ozone,,https://github.com/tdhock/cs499-spring2019/blob/master/2019-02-05-linear-regression/viz.R,Gradient descent for 1d linear regression in ozone data
-2026-06-19T16:01:04.077739Z,tdhock/2026-06-19-svm-grid,,https://github.com/tdhock/2026-05-nlopt/blob/main/figure-svm.R,Grid search for hard margin support vector machine
+2026-06-25T03:44:29.081389Z,tdhock/2026-06-24-directlabels-grid,,https://github.com/tdhock/2026-05-nlopt/blob/main/figure-directlabels-grid.R,Linear constraints for label position optimization
